@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row table-responsive custom-scrollbar">
+        <table class="table table-bordered">
+            <thead class="t-header sticky-top">
+                <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">Full Name</th>
+                    <th scope="col">Email Id</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Phone Number</th>
+                </tr>
+            </thead>
+            <tbody class="t-body">
+                <tr *ngFor="let u of allUsers index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{u.completename}}</td>
+                    <td class="text text-primary">{{u.emailid}}</td>
+                    <td>{{u.address}}</td>
+                    <td class="text text-success">{{u.mobileno}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

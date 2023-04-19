@@ -1,0 +1,46 @@
+<app-home></app-home>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 login">
+
+            <div class="card">
+                <div class="card-header text-center">
+                    <h1>Seller - Buyer Login</h1>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <img src="/assets/images/adminlogin1.jpg" alt="logo" class="image" />
+                    </div>
+                    <div class="col-sm-6 p-4">
+                        <div class="">
+                            <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+                                <div class="mb-3">
+                                    <label class="mb-2">Email Id</label>
+                                    <input type="email" id="" class="form-control"
+                                        placeholder="Enter Your Email Address" formControlName="emailid" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="mb-2">Password</label>
+                                    <input type="password" id="form2Example2" class="form-control"
+                                        placeholder="Enter Your Password" formControlName="password" />
+                                </div>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-primary btn-sm">Login</button>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col d-flex justify-content-center">
+                                        <div class="link text-center">
+                                            <p>If You are New User <a routerLink="/signup">Signup Here</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

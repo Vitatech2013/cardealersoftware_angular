@@ -1,0 +1,118 @@
+<div class="">
+    <div class="title p-2">
+        <h1>Place Your Car For Lease or Sell</h1>
+    </div>
+    <div class="storeform  col-sm-10">
+        <div class="m-auto p-4">
+            <form [formGroup]="storecarForm" (ngSubmit)="storeCar()">
+                <div class="row">
+
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                            <label class="form-label">Car For</label>
+                            <select class="form-select" aria-label="Default select example" formControlName="cartype">
+                                <option selected>-- select --</option>
+                                <option value="Buy">Buy</option>
+                                <option value="Lease">Lease</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                            <label class="form-label">Vehicle Name</label>
+                            <input type="text" class="form-control" id="vname" formControlName="vehiclename">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                            <label class="form-label">Brand Name</label>
+                            <input type="text" class="form-control" formControlName="brandnames">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                            <label class="form-label">Vehicle Model</label>
+                            <input type="text" class="form-control" formControlName="vehiclemodel">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                            <label class="form-label">Year of Registration</label>
+                            <input type="text" class="form-control" formControlName="yearofreg">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                            <label class="form-label">Fuel Type</label>
+                            <select class="form-select" aria-label="Default select example" formControlName="fueltype">
+                                <option selected>-- select --</option>
+                                <option value="Diesel">Diesel</option>
+                                <option value="Petrol">Petrol</option>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                            <label class="form-label">KM's Driven</label>
+                            <input type="text" class="form-control" formControlName="kmsdriven">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                            <label class="form-label">Price</label>
+                            <input type="text" class="form-control" formControlName="price">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                            <label class="form-label">Color</label>
+                            <input type="text" class="form-control" formControlName="colour">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                            <label class="form-label">Registration City</label>
+                            <input type="text" class="form-control" formControlName="regcity">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                            <label class="form-label">Description</label>
+                            <input type="text" class="form-control" formControlName="description">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-4">
+                            <label class="form-label">Car Image</label>
+                            <input type="file" class="form-control" (change)="onSelectFile($event)"
+                                formControlName="image">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-4">
+                        <label class="form-label">Email id:</label>
+                        <input type="email" class="form-control" formControlName="emailid" readonly>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6 m-auto">
+                        <button type="submit" class="btn btn-success" [disabled]="storecarForm.invalid">Place Your
+                            Car</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,112 @@
+<app-home></app-home>
+<!-- Section: Design Block -->
+
+
+
+<div class="container-fluid">
+    <div class="row g-0">
+        <div class="col-sm-4 signup">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Sign up now</h2>
+                </div>
+                <form [formGroup]="signUpForm" (ngSubmit)="signUp()">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-outline mb-2">
+                                <label class="form-label">Full Name</label>
+                                <input type="text" class="form-control" formControlName="completename"
+                                    [class.is-invalid]="FullName.touched && FullName.invalid" required />
+                                <div class="form-text text-danger"
+                                    *ngIf="FullName.errors?.['required'] && (FullName.dirty || FullName.touched)">
+                                    First
+                                    Name is Required.
+                                </div>
+                                <div class="form-text text-danger"
+                                    *ngIf="FullName.errors?.['minlength'] && (FullName.dirty || FullName.touched)">
+                                    Name is Too Short.
+                                </div>
+                                <div class="form-text text-danger"
+                                    *ngIf="FullName.errors?.['pattern'] && (FullName.dirty || FullName.touched)">
+                                    First Name Should starts with Alphabet
+                                </div>
+
+                            </div>
+                            <div class="form-outline mb-2">
+                                <label class="form-label">Email Id</label>
+                                <input type="text" class="form-control" formControlName="emailid"
+                                    [class.is-invalid]="Emailid.touched && Emailid.invalid" />
+                                <div id="emailHelp" class="form-text text-muted">We'll never share your email with
+                                    anyone else.
+                                </div>
+                                <div class="form-text text-danger"
+                                    *ngIf="Emailid.errors?.['required'] && (Emailid.dirty || Emailid.touched)">
+                                    Email is Required.
+                                </div>
+                                <div class="form-text text-danger"
+                                    *ngIf="Emailid.errors?.['email'] && (Emailid.dirty || Emailid.touched)">
+                                    Email is Invalid.
+                                </div>
+
+                            </div>
+                            <div class="form-outline mb-2">
+                                <label class="form-label">Address</label>
+                                <input type="email" class="form-control" formControlName="address"
+                                    [class.is-invalid]="Address.touched && Address.invalid" />
+                                <div class="form-text text-danger"
+                                    *ngIf="Address.errors?.['required'] && (Address.dirty || Address.touched)">
+                                    Must fill the Address
+                                </div>
+                            </div>
+                            <div class="form-outline mb-2">
+                                <label class="form-label">Password</label>
+                                <input type="email" class="form-control" formControlName="password"
+                                    [class.is-invalid]="Password.touched && Password.invalid" />
+                                    <div class="form-text text-danger"
+                                        *ngIf="Password.errors?.['required'] && (Password.dirty || Password.touched)">
+                                        Password is Required.
+                                    </div>
+                                    <div class="form-text text-danger"
+                                        *ngIf="Password.errors?.['minlength'] || Password.errors?.['maxlength'] && (Password.dirty || Password.touched)">
+                                        Atleast Min. 6 Characters And Max. 8 Characters Only
+                                    </div>
+                            </div>
+                            <div class="form-outline mb-2">
+                                <label class="form-label">Mobile Number</label>
+                                <input type="password" class="form-control" formControlName="mobileno"
+                                    [class.is-invalid]="Mobile.touched && Mobile.invalid" />
+                                    <div class="form-text text-danger"
+                                    *ngIf="Mobile.errors?.['required'] && (Mobile.dirty || Mobile.touched)">
+                                    Mobile Number is Required.
+                                </div>
+                                <div class="form-text text-danger"
+                                    *ngIf="Mobile.errors?.['pattern'] && (Mobile.dirty || Mobile.touched)">
+                                    Mobile Number is Invalid.
+                                </div>
+                                <div class="form-text text-danger"
+                                    *ngIf="Mobile.errors?.['minlength'] && (Mobile.dirty || Mobile.touched)">
+                                    Enter Valid Number.
+                                </div>
+                                <div class="form-text text-danger"
+                                    *ngIf="Mobile.errors?.['maxlength'] && (Mobile.dirty || Mobile.touched)">
+                                    Enter 10 Numbers Only.
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-block mb-2" [disabled]="signUpForm.invalid"> 
+                            Sign up
+                        </button>
+                    </div>
+                    <div class="link text-center">
+                        <p>Already Have an Account <a routerLink="/login">Login here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

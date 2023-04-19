@@ -1,0 +1,71 @@
+<div class="" mat-dialog-close="true">
+    
+    <h1 class="bg-light text-primary p-2 text-center">Test Drive car <span class="ic" ><mat-icon>close</mat-icon></span> </h1>
+  
+</div>
+<div class="card">
+    <form [formGroup]="testDriveCarForm" (ngSubmit)="testDrive()">
+        <div class="row">
+            <div class="col-sm-10 m-auto">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Email Id</label>
+                            <input type="email" class="form-control" placeholder="Enter Email id" formControlName="emailid" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Source</label>
+                            <input type="text" class="form-control" placeholder="Enter Source" formControlName="source">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Destination</label>
+                            <input type="text" class="form-control" placeholder="Enter Destination"
+                                formControlName="destination">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Km's Driven</label>
+                            <input type="text" class="form-control" placeholder="Enter Kilometers driven"
+                                formControlName="tkmsdriven">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">License Number</label>
+                            <input type="text" class="form-control" placeholder="Enter License Number"
+                                formControlName="licensenumber">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">About Car</label>
+                            <textarea type="text" class="form-control" placeholder="About car"
+                                formControlName="aboutcar"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Query</label>
+                            <textarea type="text" class="form-control" placeholder="Enter a Query"
+                                formControlName="query"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mb-3 mt-3">
+                    <button class="btn btn-warning">Book Car for Test Drive</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

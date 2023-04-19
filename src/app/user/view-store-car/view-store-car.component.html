@@ -1,0 +1,47 @@
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Type</th>
+                <th scope="col">Email</th>
+                <!-- <th scope="col">Vehicle Name</th> -->
+                <th scope="col">Brand</th>
+                <th scope="col">Model</th>
+                <th scope="col">Year Of Reg</th>
+                <th scope="col">Fuel Type</th>
+                <th scope="col">KM's Driven</th>
+                <th scope="col">Price</th>
+                <!-- <th scope="col">Color</th> -->
+                <th scope="col">Reg City</th>
+                <th scope="col">Description</th>
+                <th scope="col">Image</th>
+                <th scope="col">Status</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of store index as i">
+                <td>{{i+1}}</td>
+                <td> {{c.cartype}}</td>
+                <td>{{c.emailid}}</td>
+                <!-- <td>{{c.vehiclename}}</td> -->
+                <td>{{c.brandnames}}</td>
+                <td>{{c.vehiclemodel}}</td>
+                <td>{{c.yearofreg}}</td>
+                <td>{{c.fueltype}}</td>
+                <td>{{c.kmsdriven}}</td>
+                <td>{{c.price| currency:'INR'}}</td>
+                <!-- <td>{{c.colour}}</td> -->
+                <td>{{c.regcity}}</td>
+                <td>{{c.description}}</td>
+                <td> <img src="{{c.image}}" alt="pic"  height="60px"> </td>
+                <td>{{c.status}}</td>
+                <td>
+                    <a class="" (click)="editCar(c)"><mat-icon color="primary">edit</mat-icon></a>
+                    <a class="" (click)="deleteCar(c)"><mat-icon color="warn">delete</mat-icon></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

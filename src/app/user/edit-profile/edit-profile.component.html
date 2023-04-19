@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="text-center p-2 bg-secondary text-white">
+            <h1>Edit And Update Your Details</h1>
+        </div>
+        <form class="edit" [formGroup]="editForm" (ngSubmit)="update()">
+            <div class="form-group mb-2">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" formControlName="completename">
+            </div>
+            <div class="form-group mb-2">
+                <label class="form-label">Email id</label>
+                <input type="email" class="form-control" formControlName="emailid" readonly>
+            </div>
+            <div class="form-group mb-2">
+                <label class="form-label">Phone Number</label>
+                <input type="number" class="form-control" formControlName="mobileno">
+            </div>
+            <div class="form-group mb-2">
+                <label class="form-label">Address</label>
+                <textarea class="form-control" rows="2" formControlName="address"></textarea>
+            </div>
+            <div class="text-center m-2">
+                <button type="submit" class="btn btn-primary">Update Details</button>
+            </div>
+        </form>
+    </div>
+</div>

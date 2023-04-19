@@ -1,0 +1,101 @@
+<div class="" mat-dialog-close="true">
+    
+    <h1 class="bg-light text-primary p-2 text-center">Lease car <span class="ic" ><mat-icon>close</mat-icon></span> </h1>
+  
+</div>
+<div class="card">
+    <form [formGroup]="leaseForm" (ngSubmit)="leaseCar()">
+        <div class="row">
+            <div class="col-sm-10 m-auto">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Seller Email Id</label>
+                            <input type="email" class="form-control" placeholder="Seller Email id"
+                                formControlName="lsemailid" readonly>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Buyer Email Id</label>
+                            <input type="email" class="form-control" placeholder="Buyer Email id"
+                                formControlName="lbemailid">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Vehicle Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Vehicle Name"
+                                formControlName="lcarid" readonly>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Date</label>
+                            <input type="date" id="date" placeholder="Enter Date" class="form-control"
+                                formControlName="ldate">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Expire Date</label>
+                            <input type="date" id="date" placeholder="Enter Date" class="form-control"
+                                formControlName="lexpireddate">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Duration</label>
+                            <input type="text" class="form-control" placeholder="Enter Duration"
+                                formControlName="lperiod">
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Card Type</label>
+                            <select class="form-select" aria-label="Default select example" formControlName="lcardtype">
+                                <option selected > --- select ---</option>
+                                <option value="Debit card">Debit Card</option>
+                                <option value="Credit card">Credit Card</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Card Holder Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Card Holder Name"
+                                formControlName="lcardholder">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="mb-3 mt-3">
+                            <label class="form-label">Card Number</label>
+                            <input type="text" class="form-control" placeholder="Enter Card Number"
+                                formControlName="lcardnumber">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-3 mt-3">
+                        <label class="form-label">Amount</label>
+                        <input type="text" class="form-control" placeholder="Enter Amount" formControlName="lamount"
+                            readonly>
+                    </div>
+                </div>
+
+                <div class="text-center mb-3 mt-3">
+                    <button type="submit" class="btn btn-success" [disabled]="leaseForm.invalid">Lease Car</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

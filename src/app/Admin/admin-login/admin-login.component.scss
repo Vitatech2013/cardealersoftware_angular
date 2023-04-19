@@ -1,0 +1,37 @@
+.container-fluid {
+    background-image: url("/assets/images/adminlogin3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 623px;
+}
+
+.admin {
+    margin: 130px auto;
+}
+
+.card {
+    background: transparent;
+    border: 2px solid white;
+}
+
+input {
+   background: transparent;
+}
+
+::placeholder {
+    color:whitesmoke;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn {
+    background-color:goldenrod;
+    color: whitesmoke;
+    width: 40%;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: blue;
+    color: white;
+}

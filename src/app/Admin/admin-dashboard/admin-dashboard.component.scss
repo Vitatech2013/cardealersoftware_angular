@@ -1,0 +1,45 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background-color:#2481a3;
+
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+ 
+}
+.mat-toolbar{
+  background-color:#2d3494;
+
+}
+.space {
+  flex: 1 1 auto;
+}
+
+
+
+.links {
+  display: block;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 10px;
+}
+
+.links:hover {
+  background-color: #b2aec1;
+  color: white;
+}
+.active{
+  background-color: #9791b0;
+}

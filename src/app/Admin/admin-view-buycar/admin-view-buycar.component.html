@@ -1,0 +1,32 @@
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Seller Email id</th>
+                <th scope="col">Buyer Email id</th>
+                <th scope="col">Car id</th>
+                <th scope="col">Buy Date</th>
+                <th scope="col">Buy Amount</th>
+                <th scope="col">Card Type</th>
+                <th scope="col">Card Holder</th>
+                <th scope="col">Card Number</th>
+                <th scope="col">Expiry Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of buyCars; index as i">
+                <td>{{i+1}}</td>
+                <td> {{c.semailid}}</td>
+                <td>{{c.bemailid}}</td>
+                <td>{{c.carid}}</td>
+                <td>{{c.date}}</td>
+                <td>{{c.amount}}</td>
+                <td>{{c.cardtype}}</td>
+                <td>{{c.cardholder}}</td>
+                <td>{{c.cardnumber}}</td>
+                <td>{{c.expireddate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

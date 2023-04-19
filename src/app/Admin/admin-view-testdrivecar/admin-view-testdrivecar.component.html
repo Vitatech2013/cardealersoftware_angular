@@ -1,0 +1,24 @@
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Source</th>
+                <th scope="col">Destination</th>
+                <th scope="col">KM's Driven</th>
+                <th scope="col">License Number</th>
+                <th scope="col">About car</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of tdCars; index as i">
+                <td>{{i+1}}</td>
+                <td> {{c.source}}</td>
+                <td>{{c.destination}}</td>
+                <td>{{c.tkmsdriven}}</td>
+                <td>{{c.licensenumber}}</td>
+                <td>{{c.aboutcar}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

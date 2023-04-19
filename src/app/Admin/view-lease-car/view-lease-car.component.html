@@ -1,0 +1,34 @@
+<div class="table-responsive">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">S.No</th>
+                <th scope="col">Seller Email id</th>
+                <th scope="col">Buyer Email id</th>
+                <th scope="col">Car id</th>
+                <th scope="col">Lease Date</th>
+                <th scope="col">Lease Amount</th>
+                <th scope="col">Duration</th>
+                <th scope="col">Card Type</th>
+                <th scope="col">Card Holder</th>
+                <th scope="col">Card Number</th>
+                <th scope="col">Expiry Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let c of leaseCars; index as i">
+                <td>{{i+1}}</td>
+                <td> {{c.lsemailid}}</td>
+                <td>{{c.lbemailid}}</td>
+                <td>{{c.lcarid}}</td>
+                <td>{{c.ldate}}</td>
+                <td>{{c.lamount}}</td>
+                <td>{{c.lperiod}}</td>
+                <td>{{c.lcardtype}}</td>
+                <td>{{c.lcardholder}}</td>
+                <td>{{c.lcardnumber}}</td>
+                <td>{{c.lexpireddate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
